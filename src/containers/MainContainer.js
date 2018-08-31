@@ -31,6 +31,7 @@ class Main extends React.Component {
                 
                 {console.log(this.props.people)}
                 <pre>{this.props.people}</pre>
+                <div>{this.props.people.map(p => p.people.name)}</div>
                 <h1>Main</h1>
             
             </div>
