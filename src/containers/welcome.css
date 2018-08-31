@@ -1,8 +1,8 @@
 .welcome-page {
     width: 376px;
-    height: 687px;
-    background-color: red; 
+    height: 687px; 
     background-image: url('../images/welcome.jpg');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    background-position: -100px 0px;
 }

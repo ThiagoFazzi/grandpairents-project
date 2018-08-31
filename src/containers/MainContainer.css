@@ -1,8 +1,18 @@
+#header {
+    background-image: url('../images/topbar.png');
+    background-repeat: none;
+    background-size: 99.9%;
+    position: absolute;
+    width: 303px;
+    height: 75px;
+    left: 50px;
+    top: 0px;
+    z-index: 1;
+
+}
+
 .CardDeck {
-
-  
-
-    top: 0;
+    top: 30px;
     min-width: 365px;
     max-width: 422px;
     height: auto;
@@ -10,16 +20,10 @@
     position: relative;
     padding-top: 20px;
     padding-bottom: 20px;
-
-
-
 }
 
-
-
 .card{
-
-    margin: 0px 10%;
+    margin: 20px 10%;
     width: 307px;
     height: 560px;
     position: relative;
@@ -27,8 +31,11 @@
     text-align: center;
     align-items: center;
     margin-bottom: 0px;
-    display: none;
-    
+    display: none;  
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 33px;
 }
 
 .card:first-child{
@@ -42,16 +49,9 @@
     margin-left: 40px;
     margin-right: 40px;
     display: inline-block;
-
-
-
 }
 
-
-
 .btnLike{
-
-
     background-image: url('../images/green-icon.png');
     background-size: cover;
     background-position: center;
@@ -62,12 +62,10 @@
 }
 
 .btnSkip{
-    background-image: url('../images/red-icon-skip.png');
+    background-image: url('../images/red_skip_icon.png');
     background-size: cover;
     background-position: center;
-
 }
-
 
 img {
 
@@ -83,8 +81,37 @@ img {
     background-size: contain;
 }
 
+#namebox {
+    position: left;
+    width: 307px;
+    height: 64px;
+    left: 34px;
+    top: 400px;
+    background: #F78496;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 24px;
+    text-align: center;
+    color: #FFFFFF;  
+}
+
+#age {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 5px;
+}
+
 .button-container {
     margin-top: 50px;
     width: 100%;
-
 }

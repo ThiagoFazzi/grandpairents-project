@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import setLoginSuccess from '../actions/loginAction'
 import { Redirect } from 'react-router-dom'
 import LoginForm from '../components/loginForm'
+import './LoginContainer.css'
 
 class Login extends React.Component {
     
@@ -18,9 +19,11 @@ class Login extends React.Component {
     render(){
         return(
             <div>
+            <h1>Log in</h1>
                 <input type={'text'} placeholder={'Enter a Username'}/>
                 <input type={'password'} placeholder={'Enter a Password'}/>
                 <button onClick={() => this.startLogin()}>Login</button>
+                <p>Forgot your password? Click <u>here</u></p>
                 {(this.props.isLogged)? <Redirect to={{ pathname: "/main"}}/> : <Redirect to={{ pathname: "/login"}}/>}
             </div>
         )

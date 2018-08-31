@@ -19,7 +19,7 @@ class Welcome extends React.Component {
         return(
             <div>
                 
-                {(this.state.loadWelcomePage)? <Redirect to={{ pathname: "/login"}}/>: <div className={'welcome-page'}></div>}
+                {(this.state.loadWelcomePage)? <Redirect to={{ pathname: "/login"}}/> : <div className={'welcome-page'}></div>}
             </div>
         )
     }

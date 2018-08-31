@@ -1,0 +1,87 @@
+body {
+    align-items: center;
+    position: absolute;
+    width: 374px;
+    height: 660px;
+    left: 1px;
+    top: 21px;
+    background: #F5F5F5;
+  }
+  
+  h1{
+    position: absolute;
+    width: 108px;
+    height: 58px;
+    left: 134px;
+    top: 121px;
+    margin-top: 0px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-size: 36px;
+    text-align: center;
+    color: #455A64;
+    }
+  
+  input[type="password"],[type="text"]{
+    position: relative;
+    width: 279px;
+    height: 50px;
+    left: 49px;
+    top: 332px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 24px;
+    color: #757575;
+  }
+  
+  input[type="password"]{
+    float: left;
+  }
+  
+  input[type="text"]{
+    float: left;
+    clear: right;
+  
+  }
+  
+  button{
+    position: absolute;
+    width: 279px;
+    height: 72px;
+    left: 56px;
+    top: 488px;
+    background: #F78496;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    }
+  
+  p {
+    position: relative;
+    width: 297px;
+    height: 22px;
+    left: 40px;
+    top: 503px;
+    margin-bottom: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #455A64;
+  }
+  

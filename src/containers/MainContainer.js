@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import dataJson from '../data/data.json'
-//import setLoginSuccess from '../actions/loginAction'
 import getPeople from '../actions/peopleAction'
 import Button from '../components/button'
 import './MainContainer.css'
@@ -23,16 +22,14 @@ class Main extends React.Component {
 
     skipCardHandler = (id) => {
         this.props.getPeople(this.props.people.filter(person => person.id !== id))
-        //const storageUserInfo = localStorage.getItem('userAppGP')
     }
 
     render(){
         if(!this.props.people) return 'Loading'
         return(
             <div>
-                 
-                <h1>Main</h1>
-
+                
+            <div id="header"></div>
                 <div className={'CardDeck'}>
                     {this.props.people.map(person => 
                         <div 
@@ -40,20 +37,22 @@ class Main extends React.Component {
                             className={'card'}
                         >
                                 <img src={person.photo}></img>
-                                {person.name}
+                                <div id="namebox">{person.name}<div id="age">{person.age}</div></div>
                                 <div className={'button-container'}>
+                                   
+                                    <Button 
+                                        className="btnSkip" 
+                                        onClickButton={() => this.skipCardHandler(person.id)}
+                                    />
                                     <Button 
                                         className="btnLike" 
                                         onClickButton={() => this.likeCardHandler(person.id)}
                                     >
                                     </Button>
-                                    <Button 
-                                        className="btnSkip" 
-                                        onClickButton={() => this.skipCardHandler(person.id)}
-                                    />
                                 </div>                     
                         </div>
                     )}
+                    
                 </div>
             </div>
         )
@@ -67,5 +66,4 @@ const mapStateToProps = (state) => (
     }
 )
 
-//export default Main
 export default connect(mapStateToProps, { getPeople })(Main)
