@@ -27,11 +27,9 @@ class Login extends React.Component {
     }
 }
 
-const mapStateToProps = (state) => (
-    console.log(state),
-    {
-    isLogged: state.login.isLogged,
-    user: state.login.user
+const mapStateToProps = (state) => ({
+    isLogged: state.loginReducer.isLogged,
+    user: state.loginReducer.user
 })
 
 export default connect(mapStateToProps, { setLoginSuccess })(Login)
