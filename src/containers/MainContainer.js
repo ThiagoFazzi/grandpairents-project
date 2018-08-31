@@ -1,11 +1,20 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import setLoginSuccess from '../actions/loginAction'
+import dataJson from '../data/data.json'
+//import setLoginSuccess from '../actions/loginAction'
+import getPeople from '../actions/peopleAction'
 
 
 
 class Main extends React.Component {
     
+
+    componentDidMount(){
+        
+         this.props.getPeople(dataJson)
+         //console.log(this.props.user)
+         //console.log(this.props)
+    }
     /*startLogin = () => {
         const user = {
             id: 12,
@@ -16,18 +25,25 @@ class Main extends React.Component {
     }*/
 
     render(){
+        
         return(
             <div>
-                <h1>MAIN COMPONENT</h1>
+                
+                {console.log(this.props.people)}
+                <pre>{this.props.people}</pre>
+                <h1>Main</h1>
+            
             </div>
         )
     }
 }
 
-const mapStateToProps = (state) => ({
-    isLogged: state.login.isLogged,
-    user: state.login.user
-})
+const mapStateToProps = (state) => (
+    {
+        filter: state.loginReducer.user.usertype,
+        people: state.peopleReducer.people
+    }
+)
 
-//export default connect(mapStateToProps, { })(Main)
-export default Main
+//export default Main
+export default connect(mapStateToProps, { getPeople })(Main)
