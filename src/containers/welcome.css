@@ -1,0 +1,8 @@
+.welcome-page {
+    width: 376px;
+    height: 687px;
+    background-color: red; 
+    background-image: url('../images/welcome.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
